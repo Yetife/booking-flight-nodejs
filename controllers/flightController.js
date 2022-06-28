@@ -1,9 +1,10 @@
 const {Flights} = require('../models/Flight')
-
+const uuid = require("uuid").v4()
 
 exports.addFLight = async (req, res) => {
     try {
         const flight = await req.body;
+        flight.id = uuid
         Flights.push(flight);
         res.status(201).json({
             message: "Flight booked",
@@ -30,8 +31,12 @@ exports.getFlights = async (req, res)=> {
 
 exports.getFlightById = async (req, res)=> {
     try {
-        const post = await Flights.findById(res.params.id);
-        res.status(200).json(post)
+        let id = req.params.id
+        const flight = await Flights.find((flight) => flight.id === id);
+        res.status(200).json({
+                message: "flight found",
+                flight
+            })
     }catch (err) {
         res.status(500).json(err);
     }

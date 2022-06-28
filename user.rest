@@ -1,0 +1,13 @@
+POST http://localhost:3000/flight
+Content-Type: application/json
+
+{
+  "title": "Flight to Tokyo",
+  "time": "10:01",
+  "price": "20000",
+  "date": "12-10-2023"
+}
+
+###
+GET http://localhost:3000/flight
+#Accept: application/json
