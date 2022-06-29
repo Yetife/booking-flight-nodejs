@@ -2,12 +2,32 @@ POST http://localhost:3000/flight
 Content-Type: application/json
 
 {
-  "title": "Flight to Tokyo",
+  "title": "Flight to Canada",
   "time": "10:01",
   "price": "20000",
   "date": "12-10-2023"
 }
 
 ###
+PUT http://localhost:3000/flight/f358858a-a565-4176-9c5a-7be4e2404706
+Content-Type: application/json
+
+{
+"title": "Flight to Canada",
+"time": "10:01",
+"price": "20000",
+"date": "12-10-2023"
+}
+
+
+###
 GET http://localhost:3000/flight
+#Accept: application/json
+
+###
+GET http://localhost:3000/flight/1d0b6ae0-c09c-4b9c-b7f9-8c6f0c7cdbe1
+#Accept: application/json
+
+###
+DELETE http://localhost:3000/flight/b2720e96-4496-4371-9c1a-ffe550079830
 #Accept: application/json
