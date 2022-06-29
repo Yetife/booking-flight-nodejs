@@ -3,9 +3,7 @@ Content-Type: application/json
 
 {
   "title": "Flight to Canada",
-  "time": "10:01",
-  "price": "20000",
-  "date": "12-10-2023"
+  "price": "20000"
 }
 
 ###
@@ -14,9 +12,7 @@ Content-Type: application/json
 
 {
 "title": "Flight to Canada",
-"time": "10:01",
-"price": "20000",
-"date": "12-10-2023"
+"price": "20000"
 }
 
 
